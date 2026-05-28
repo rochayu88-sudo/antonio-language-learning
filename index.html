@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antonio's Italian Learning Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🇮🇹 Antonio's Italian Learning Hub</h1>
+        <nav>
+            <a href="#exercises" class="nav-btn">Interactive Exercises</a>
+            <a href="#pronunciation" class="nav-btn">Pronunciation</a>
+            <a href="#grammar" class="nav-btn">Grammar</a>
+            <a href="#vocabulary" class="nav-btn">Vocabulary</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="welcome">
+            <h2>Benvenuto, Antonio! 👋</h2>
+            <p>Your personalized Italian learning experience starts here!</p>
+            <div class="progress-bar">
+                <div class="progress-fill" id="overallProgress"></div>
+                <span class="progress-text">Progress: <span id="progressPercent">0%</span></span>
+            </div>
+        </section>
+
+        <section id="exercises" class="section">
+            <h2>🎮 Interactive Exercises</h2>
+            <div class="exercise-grid">
+                <div class="exercise-card" onclick="openExercise('articles')">
+                    <h3>Article Detective</h3>
+                    <p>Master il, la, lo with this fun matching game!</p>
+                    <div class="difficulty">Level: Beginner</div>
+                </div>
+                
+                <div class="exercise-card" onclick="openExercise('pronunciation')">
+                    <h3>Pronunciation Trainer</h3>
+                    <p>Perfect your Italian sounds and syllables</p>
+                    <div class="difficulty">Level: All Levels</div>
+                </div>
+                
+                <div class="exercise-card" onclick="openExercise('verbs')">
+                    <h3>Verb Conjugation Wheel</h3>
+                    <p>Spin to practice essere, avere, and more!</p>
+                    <div class="difficulty">Level: Intermediate</div>
+                </div>
+                
+                <div class="exercise-card" onclick="openExercise('prepositions')">
+                    <h3>Preposition Puzzle</h3>
+                    <p>Place objects correctly using Italian prepositions</p>
+                    <div class="difficulty">Level: Intermediate</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Exercise Modal -->
+        <div id="exerciseModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeExercise()">&times;</span>
+                <div id="exerciseContent"></div>
+            </div>
+        </div>
+
+        <section id="vocabulary" class="section">
+            <h2>📚 Daily Vocabulary</h2>
+            <div class="vocab-card-container">
+                <div class="vocab-card" id="vocabCard">
+                    <div class="vocab-front">
+                        <span id="vocabWord">ciao</span>
+                        <button onclick="flipCard()" class="flip-btn">🔄</button>
+                    </div>
+                    <div class="vocab-back hidden">
+                        <span
