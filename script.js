@@ -79,3 +79,4 @@ function getExerciseContent(exerciseName) {
       return "";
   }
 }
+
